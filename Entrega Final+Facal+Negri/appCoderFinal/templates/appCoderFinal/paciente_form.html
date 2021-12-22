@@ -1,0 +1,21 @@
+
+{% extends "appCoderFinal/padre.html" %}
+
+{% load static %}
+ 
+
+{% block contenido %}
+
+    <h1>Formulario de paciente</h1>
+ 
+
+    <form method="POST"> {% csrf_token %}
+
+        {{form.as_p}}
+
+
+        <input type="submit" value="Enviar" />
+
+        </form>
+
+{% endblock %}     

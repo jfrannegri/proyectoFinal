@@ -1,0 +1,21 @@
+
+{% extends "appCoderFinal/padre.html" %}
+
+{% load static %}
+ 
+
+{% block contenido %}
+
+    <h1>Detalle pacientes</h1>
+    <p>Detalle</p>
+    <p> Apellido panciente: <i>{{paciente.apellido}}</i></p>
+    <p> Obra social: <i>{{paciente.obrasocial}}</i></p>
+    <p> edad <i>{{paciente.edad}}</i></p>
+
+    <p> 
+
+        <a href="{% url 'List1' %}">Regresar</a>
+        
+
+    </p>
+{% endblock %}     

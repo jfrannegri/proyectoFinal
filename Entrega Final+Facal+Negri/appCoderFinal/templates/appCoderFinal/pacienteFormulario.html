@@ -1,0 +1,28 @@
+
+{% extends "appCoderFinal/padre.html" %}
+
+{% load static %}
+ 
+
+{% block contenido %}
+
+   <form action="/appCoderFinal/pacienteFormulario" method="POST">{% csrf_token %}
+
+       
+    
+    <!-- 
+           <p>Nombre: <input type="text" name="apellido">   </p>
+        <p>Obra social: <input type="text" name="obrasocial">   </p>
+        <p>Edad: <input type="text" name="edad">   </p>
+
+        --> 
+        
+        <table>
+        {{  miFormulario.as_table  }}
+        </table>    
+        
+        <input type="submit" value="Envíar">
+
+   </form>
+
+{% endblock %}     

@@ -1,0 +1,27 @@
+
+{% extends "appCoderFinal/padre.html" %}
+
+{% load static %}
+ 
+
+{% block contenido %}
+
+    <h1>Lista de enfermeras</h1>
+    <p>Datps de enfermeras</p>
+
+    {% for enfermera in object_list %}    
+
+            
+        <li>{{ enfermera.apellido }}</li>
+        
+        <p>
+        <a href="{% url 'Detail2' enfermera.id %}">Ver más</a>
+        <a href="{% url 'Edit2' enfermera.id %}">Editar</a>
+        <a href="{% url 'Delete2' enfermera.id %}">Borrar</a>
+
+        </p>
+
+    {% endfor %} 
+
+
+{% endblock %}     

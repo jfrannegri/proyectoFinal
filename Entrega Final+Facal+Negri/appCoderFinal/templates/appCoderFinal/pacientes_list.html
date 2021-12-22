@@ -1,0 +1,27 @@
+
+{% extends "appCoderFinal/padre.html" %}
+
+{% load static %}
+ 
+
+{% block contenido %}
+
+    <h1>Lista de pacientes</h1>
+    <p>Datps de pacientes</p>
+
+    {% for paciente in object_list %}    
+
+            
+        <li>{{ paciente.apellido }}</li>
+        
+        <p>
+        <a href="{% url 'Detail1' paciente.id %}">Ver más</a>
+        <a href="{% url 'Edit1' paciente.id %}">Editar</a>
+        <a href="{% url 'Delete1' paciente.id %}">Borrar</a>
+
+        </p>
+
+    {% endfor %} 
+
+
+{% endblock %}     

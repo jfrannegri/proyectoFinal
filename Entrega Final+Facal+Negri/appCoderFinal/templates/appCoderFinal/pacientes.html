@@ -1,0 +1,19 @@
+
+{% extends "appCoderFinal/padre.html" %}
+
+{% load static %}
+ 
+
+{% block contenido %}
+
+    <h1>Titulo pacientes</h1>
+    <p>Parrafo pacientes</p>
+
+   
+    <p>
+        <a href="{% url 'pacienteFormulario' %}">Carga formulario paciente</a>
+        <a href="{% url 'List1' %}">Formulario pacientes</a>
+    </p>   
+     
+
+{% endblock %}     

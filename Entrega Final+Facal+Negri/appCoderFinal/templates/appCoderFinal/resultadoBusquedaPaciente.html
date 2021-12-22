@@ -1,0 +1,26 @@
+
+{% extends "appCoderFinal/padre.html" %}
+
+{% load static %}
+ 
+
+{% block contenido %}
+
+    <h1>Estamos buscando equipo</h1>
+
+    {% if pacientes %}
+
+        {% for paciente in pacientes %}
+
+        <li>Paciente: {{paciente.apellido}}  </li>
+
+        {% endfor %}
+
+    {% endif %}
+
+    
+
+
+   
+
+{% endblock %}     

@@ -1,0 +1,22 @@
+
+{% extends "appCoderFinal/padre.html" %}
+
+{% load static %}
+ 
+
+{% block contenido %}
+
+    <h1>Detalle enfermeras</h1>
+    <p>Detalle</p>
+    <p> Apellido enfermera: <i>{{enfermera.apellido}}</i></p>
+    <p> Profesional: <i>{{enfermera.activo}}</i></p>
+    <p> Activo: <i>{{enfermera.profesional}}</i></p>
+    <p> Fecha de incorporación: <i>{{enfermera.fechaDeIncorporacion}}</i>  </p>
+
+    <p> 
+
+        <a href="{% url 'List2' %}">Regresar</a>
+        
+
+    </p>
+{% endblock %}     

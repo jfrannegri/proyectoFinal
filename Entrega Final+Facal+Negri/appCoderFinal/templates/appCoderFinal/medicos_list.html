@@ -1,0 +1,27 @@
+
+{% extends "appCoderFinal/padre.html" %}
+
+{% load static %}
+ 
+
+{% block contenido %}
+
+    <h1>Lista de médicos</h1>
+    <p>Datps de Médicos</p>
+
+    {% for medico in object_list %}    
+
+            
+        <li>{{ medico.apellido }}</li>
+        
+        <p>
+        <a href="{% url 'Detail' medico.id %}">Ver más</a>
+        <a href="{% url 'Edit' medico.id %}">Editar</a>
+        <a href="{% url 'Delete' medico.id %}">Borrar</a>
+
+        </p>
+
+    {% endfor %} 
+
+
+{% endblock %}     
